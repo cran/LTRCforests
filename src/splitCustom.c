@@ -313,9 +313,9 @@ double getCustomSplitStatisticSurvival (unsigned int n,
   double sumLeftEvent, sumRightEvent, sumParentEvent;
   double lambdaLeft, lambdaRight, lambdaParent;
 
-  sumParentEvent = 0;
-  sumParentTime = 0;
-  for (i = 0; i < n; i++) {
+  sumParentEvent = 0.0;
+  sumParentTime = 0.0;
+  for (i = 1; i <= n; i++) {
 	  sumParentEvent += event[i];
 	  sumParentTime += time[i];
   }
@@ -324,7 +324,12 @@ double getCustomSplitStatisticSurvival (unsigned int n,
    * Compute the overall lambda and dev
    */
 
-  lambdaParent = sumParentEvent / sumParentTime;
+  if (sumParentTime == 0) {
+    lambdaParent = 0;
+  } else {
+    lambdaParent = sumParentEvent / sumParentTime;
+  }
+  
   if (lambdaParent == 0) {
 	  dev = 0;           /* no deaths to split! */
   } else {
@@ -337,7 +342,7 @@ double getCustomSplitStatisticSurvival (unsigned int n,
     sumLeftTime = 0;
     sumRightEvent = 0;
     sumRightTime = 0;
-    for (i = 0; i < n; i++) {
+    for (i = 1; i <= n; i++) {
       if (membership[i] == LEFT) {
         sumLeftEvent += event[i];
         sumLeftTime += time[i];

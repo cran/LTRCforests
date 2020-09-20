@@ -3,8 +3,8 @@
 \name{predictProb}
 \alias{predictProb}
 \alias{predictProb.ltrccf,}
-\alias{predictProb.ltrcrsf}
-\title{Compute a Survival Curve from a LTRCCF model or a LTRCRSF model}
+\alias{predictProb.ltrcrrf}
+\title{Compute a Survival Curve from a LTRCCF model or a LTRCRRF model}
 \usage{
 predictProb(
   object,
@@ -16,7 +16,7 @@ predictProb(
 )
 }
 \arguments{
-\item{object}{an object as returned by \code{\link{ltrccf}} or by \code{\link{ltrcrsf}}.}
+\item{object}{an object as returned by \code{\link{ltrccf}} or by \code{\link{ltrcrrf}}.}
 
 \item{newdata}{an optional data frame containing the test data
 (with the names of the variables the same as those in \code{data} from \code{object}).}
@@ -39,10 +39,10 @@ will be computed.}
 \item{time.tau}{an optional vector, with the \emph{i}-th entry giving the upper time limit for the
 computed survival probabilities for the \emph{i}-th data of interest (i.e., only computes
 survival probabilies at \code{time.eval[time.eval <= time.tau[i]]} for the \emph{i}-th
-data of interest). If \code{OOB = TRUE}, the length of \code{time.tau} is equal to the length of
+data of interest). If \code{OOB = TRUE}, the length of \code{time.tau} is equal to the size of
 \code{data} used to train the \code{object};
-If \code{OOB = FALSE}, the length of \code{time.tau} is equal to the length
-of \code{newdata}, or equal to the length of \code{data} if \code{newdata} is not given.
+If \code{OOB = FALSE}, the length of \code{time.tau} is equal to the size
+of \code{newdata}, or equal to the size of \code{data} if \code{newdata} is not given.
 The default \code{NULL} is simply to set all entries of \code{time.tau} equal to the maximum
 value of \code{time.eval}, so that all estimated survival probabilities are computed at the
 same \code{time.eval}.}
@@ -61,7 +61,7 @@ A list containing:
 }
 \description{
 Constructs a monotone nonincreasing estimated survival curve from a LTRCCF model or a 
-LTRCRSF model for any given (left-truncated) right-censored survival data with time-varying 
+LTRCRRF model for any given (left-truncated) right-censored survival data with time-varying 
 covariates.
 It can also compute survival function estimates for left-truncated right-censored data
 with time-invariant covariates.

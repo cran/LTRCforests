@@ -1,4 +1,3 @@
-#' @useDynLib LTRCforests, .registration = TRUE
 #' @importFrom parallel mclapply
 #' @importFrom stats as.dist as.formula cutree dlnorm formula hclust lowess median model.matrix na.omit optim pgamma plnorm pnorm predict qnorm runif sd supsmu var wilcox.test
 getltrc.bayes.rule <- function(prob, pi.hat = NULL) {
@@ -147,7 +146,7 @@ avector <- function(x, name = FALSE) {
 #       return(invisible(FALSE))
 #     }
 # }
-cv.folds <- function (n, folds = 10) {
+cvfolds <- function (n, folds = 10) {
   split(resample(1:n), rep(1:folds, length = n))
 }
 data.matrix <- function(x) {
@@ -163,7 +162,7 @@ data.matrix <- function(x) {
         }
   }))
 }
-family.pretty <- function(x) {
+familypretty <- function(x) {
   fmly <- x$family
   if (!is.null(x$forest$rfq) && x$forest$rfq) {
     fmly <- "rfq"

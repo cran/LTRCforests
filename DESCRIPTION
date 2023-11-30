@@ -1,6 +1,6 @@
 Package: LTRCforests
-Version: 0.6.5
-Date: 2023-10-14
+Version: 0.7.0
+Date: 2023-11-29
 Title: Ensemble Methods for Survival Data with Time-Varying Covariates
 Authors@R: c(person(given = "Weichi", family = "Yao", role = c("aut", "cre"), 
                     email = "weichi.yao@gmail.com"),
@@ -25,6 +25,6 @@ License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
-Packaged: 2023-10-18 22:26:14 UTC; weichiyao
+Packaged: 2023-11-30 03:33:00 UTC; weichiyao
 Repository: CRAN
-Date/Publication: 2023-10-19 07:00:20 UTC
+Date/Publication: 2023-11-30 03:50:02 UTC

@@ -1,4 +1,4 @@
-aa12939d9cd7c82b810c3c273e773e79 *DESCRIPTION
+64e980207bc34516ebb611fce06dc4f2 *DESCRIPTION
 1736e16e92e1beb0f4cf0b1ffd7f7f5a *NAMESPACE
 69aa893a361b2ea0236b8fea7c60f841 *R/LTRCforests-package.R
 40b9108c5d78bc52abf5dc47d3e22735 *R/LTRCforests.news.R
@@ -30,7 +30,7 @@ cc75bc3a72afa7be28950490231f2ee0 *man/print.Rd
 fec2c9f89c2c3c24a4dbb395be8fd8b1 *man/sbrier_ltrc.Rd
 6a22ef0f880c0ca8d09d842ef2af9c56 *man/tune.ltrccif.Rd
 0b1cf4985cdd11165599e6e10600eb38 *man/tune.ltrcrrf.Rd
-f29fdfa74a5c9682ae02adc58b0df609 *src/LTRCforests.c
+674a63143c1a948ae3b852b7f319c697 *src/LTRCforests.c
 a40f83cea61f9f01691e8e9663105f1f *src/LTRCforests.h
 bdea180a23115c7fa3c95d5dcd323085 *src/R_init_LTRCforests.c
 e4ea8895dc87b0a73215d0e17620c187 *src/splitCustom.c
